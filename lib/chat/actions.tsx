@@ -519,8 +519,8 @@ Assistant (you): { "tool_call": { "id": "pending", "type": "function", "function
         showStockScreener: {
           description:
             'This tool shows a generic stock screener which can be used to find new stocks based on financial or technical parameters.',
-          parameters: z.object({}),
-          generate: async function* ({ }) {
+          parameters: z.any(),
+          generate: async function* () {
             yield (
               <BotCard>
                 <></>
@@ -576,8 +576,8 @@ Assistant (you): { "tool_call": { "id": "pending", "type": "function", "function
         },
         showMarketOverview: {
           description: `This tool shows an overview of today's stock, futures, bond, and forex market performance including change values, Open, High, Low, and Close values.`,
-          parameters: z.object({}),
-          generate: async function* ({ }) {
+          parameters: z.any(),
+          generate: async function* () {
             yield (
               <BotCard>
                 <></>
@@ -633,8 +633,8 @@ Assistant (you): { "tool_call": { "id": "pending", "type": "function", "function
         },
         showMarketHeatmap: {
           description: `This tool shows a heatmap of today's stock market performance across sectors. It is preferred over showMarketOverview if asked specifically about the stock market.`,
-          parameters: z.object({}),
-          generate: async function* ({ }) {
+          parameters: z.any(),
+          generate: async function* () {
             yield (
               <BotCard>
                 <></>
@@ -690,8 +690,8 @@ Assistant (you): { "tool_call": { "id": "pending", "type": "function", "function
         },
         showETFHeatmap: {
           description: `This tool shows a heatmap of today's ETF performance across sectors and asset classes. It is preferred over showMarketOverview if asked specifically about the ETF market.`,
-          parameters: z.object({}),
-          generate: async function* ({ }) {
+          parameters: z.any(),
+          generate: async function* () {
             yield (
               <BotCard>
                 <></>
@@ -747,8 +747,8 @@ Assistant (you): { "tool_call": { "id": "pending", "type": "function", "function
         },
         showTrendingStocks: {
           description: `This tool shows the daily top trending stocks including the top five gaining, losing, and most active stocks based on today's performance`,
-          parameters: z.object({}),
-          generate: async function* ({ }) {
+          parameters: z.any(),
+          generate: async function* () {
             yield (
               <BotCard>
                 <></>
